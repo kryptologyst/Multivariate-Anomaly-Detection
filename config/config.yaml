@@ -1,0 +1,28 @@
+data:
+  n_samples: 1000
+  n_features: 3
+  anomaly_ratio: 0.05
+  test_size: 0.2
+  random_state: 42
+
+model:
+  type: autoencoder
+  encoding_dim: 3
+  hidden_dims: [8]
+  epochs: 100
+  learning_rate: 0.001
+  threshold_percentile: 95
+
+training:
+  batch_size: 32
+  validation_split: 0.1
+  early_stopping_patience: 10
+
+visualization:
+  figure_size: [12, 8]
+  dpi: 100
+  style: seaborn-v0_8
+
+logging:
+  level: INFO
+  file: logs/anomaly_detection.log
